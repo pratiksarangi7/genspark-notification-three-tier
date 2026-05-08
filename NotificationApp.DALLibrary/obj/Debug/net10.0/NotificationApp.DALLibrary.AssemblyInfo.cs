@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotificationApp.DALLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e02e884322f249e03ca5c72283d0c3b3de4b49d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac2f24b14b45fd8db059ace9b4834756d14d313b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotificationApp.DALLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotificationApp.DALLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

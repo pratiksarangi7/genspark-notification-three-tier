@@ -15,3 +15,4 @@ C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.BLLibrary
 C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.BLLibrary\obj\Debug\net10.0\refint\NotificationApp.BLLibrary.dll
 C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.BLLibrary\obj\Debug\net10.0\NotificationApp.BLLibrary.pdb
 C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.BLLibrary\obj\Debug\net10.0\ref\NotificationApp.BLLibrary.dll
+C:\Users\PRATIK\genspark\c-sharp-codes\NotificationApp\NotificationApp.BLLibrary\obj\Debug\net10.0\NotificationApp.BLLibrary.sourcelink.json

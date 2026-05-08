@@ -13,8 +13,7 @@ namespace NotificationApp.ConsoleApp
             UserService userService = new();
             NotificationService notificationService = new();
             string userIdInp;
-            EmailNotificationService emailNotificationService = new();
-            SmsNotificationService smsNotificationService = new();
+            INotificationSender notificationSender;
 
             // Main menu loop
             while (true)
@@ -53,7 +52,8 @@ namespace NotificationApp.ConsoleApp
                             userIdInp = Console.ReadLine() ?? "";
                             Console.Write("Enter email message: ");
                             string emailMsg = Console.ReadLine() ?? "";
-                            notificationService.NotifyUser(userIdInp, emailMsg, emailNotificationService, userService);
+                            notificationSender = new EmailNotificationService();
+                            notificationService.NotifyUser(userIdInp, emailMsg, notificationSender, userService);
                             break;
 
                         case "3":  // Send SMS
@@ -61,7 +61,8 @@ namespace NotificationApp.ConsoleApp
                             userIdInp = Console.ReadLine() ?? "";
                             Console.Write("Enter SMS message: ");
                             string smsMessage = Console.ReadLine() ?? "";
-                            notificationService.NotifyUser(userIdInp, smsMessage, smsNotificationService, userService);
+                            notificationSender = new SmsNotificationService();
+                            notificationService.NotifyUser(userIdInp, smsMessage, notificationSender, userService);
                             break;
 
                         case "4":  // Update user

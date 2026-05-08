@@ -3,11 +3,11 @@ using NotificationApp.ModelLibrary;
 namespace NotificationApp.DALLibrary
 {
     /// <summary>
-    /// Notification storage with auto-incrementing string IDs.
+    /// Notification storage repository
     /// </summary>
     public class NotificationRepository : AbstractRepository<string, Notification>
     {
-        // Static counter shared across instances — acts as ID sequence
+        // Static counter: acts as ID sequence
         static string notifId = "1";
 
         public NotificationRepository()
@@ -16,7 +16,7 @@ namespace NotificationApp.DALLibrary
         }
 
         /// <summary>
-        /// Stores notification with next auto-incremented ID.
+        /// Stores notification with next ID.
         /// </summary>
         public override Notification Create(Notification item)
         {

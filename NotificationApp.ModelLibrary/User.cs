@@ -6,7 +6,7 @@ namespace NotificationApp.ModelLibrary
     public class User
     {
         /// <summary>
-        /// Initializes user with contact details.
+        /// Initializes user with contact details: email and phone.
         /// </summary>
         public User(string name, string email, string phoneNumber)
         {

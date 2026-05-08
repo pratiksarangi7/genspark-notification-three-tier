@@ -14,7 +14,7 @@ namespace NotificationApp.BLLibrary
         private const int MinMessageLength = 5;
         private const int MaxSmsLength = 160;
 
-        // Email pattern: abc@def.ghi
+        // Email pattern: sample: abc@def.ghi
         private static readonly Regex EmailRegex = new(
             @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);

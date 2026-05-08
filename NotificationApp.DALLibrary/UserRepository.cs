@@ -4,11 +4,11 @@ using NotificationApp.ModelLibrary;
 namespace NotificationApp.DALLibrary
 {
     /// <summary>
-    /// User storage with auto-incrementing string IDs.
+    /// User storage repository.
     /// </summary>
     public class UserRepository : AbstractRepository<string, User>
     {
-        // Static counter shared across instances — acts as ID sequence
+        // Static counter: acts as ID sequence
         static string userId = "1";
 
         public UserRepository()
@@ -17,7 +17,7 @@ namespace NotificationApp.DALLibrary
         }
 
         /// <summary>
-        /// Stores user with next auto-incremented ID.
+        /// Stores user with next ID.
         /// </summary>
         public override User Create(User item)
         {
@@ -25,7 +25,7 @@ namespace NotificationApp.DALLibrary
             int id = Convert.ToInt32(userId);
             id += 1;
             userId = id.ToString();
-            System.Console.WriteLine($"user id is: {userId}");
+            Console.WriteLine($"user id is: {userId}");
             _items[userId] = item;
             return item;
         }

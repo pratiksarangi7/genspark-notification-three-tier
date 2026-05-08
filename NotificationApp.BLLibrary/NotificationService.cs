@@ -12,16 +12,14 @@ namespace NotificationApp.BLLibrary
         private readonly NotificationValidator _validator = new();             // Validation before sending
 
         /// <summary>
-        /// Validates, persists, and sends a notification to the user.
+        /// Validates, stores, and sends a notification to the user.
         /// Throws ArgumentException if validation fails.
         /// </summary>
         public void NotifyUser(string userId, string message, INotificationSender sender, UserService userService)
         {
             // Validate message is not empty and has at least 5 characters
             _validator.ValidateMessage(message);
-
             User u = userService.GetUser(userId);
-
             // Validate email if sending via Email
             if (sender is EmailNotificationService)
             {
@@ -35,7 +33,7 @@ namespace NotificationApp.BLLibrary
             }
 
             // Create, store, and send
-            Notification n = new(message);
+            Notification n = new(message, userId);
             notificationRepository.Create(n);
             sender.Send(u, n);
         }
@@ -52,6 +50,12 @@ namespace NotificationApp.BLLibrary
         {
             var result = notificationRepository.GetAll();
             return result!;
+        }
+        /// <summary>Returns all notifications sent to particular user.</summary>
+        public List<Notification> GetNotificationsByUserId(string id)
+        {
+            var result=notificationRepository.GetAll()!.Where((notif)=>notif.UserId==id);
+            return [.. result];
         }
     }
 }

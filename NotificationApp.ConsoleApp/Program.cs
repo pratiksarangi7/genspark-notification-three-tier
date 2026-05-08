@@ -3,7 +3,7 @@ using NotificationApp.BLLibrary;
 namespace NotificationApp.ConsoleApp
 {
     /// <summary>
-    /// Entry point: interactive console menu for the notification system.
+    /// Entry point: console menu for the notification system.
     /// </summary>
     public class ConsoleApp
     {
@@ -19,7 +19,8 @@ namespace NotificationApp.ConsoleApp
             // Main menu loop
             while (true)
             {
-                Console.WriteLine("1: Create new user");
+                Console.WriteLine("\n== CHOICES ==");
+                Console.WriteLine("\n1: Create new user");
                 Console.WriteLine("2: Send Email");
                 Console.WriteLine("3: Send SMS");
                 Console.WriteLine("4: Update user details");
@@ -27,7 +28,8 @@ namespace NotificationApp.ConsoleApp
                 Console.WriteLine("6: Get all users");
                 Console.WriteLine("7: Get all sent notifications");
                 Console.WriteLine("8: Get notification by id");
-                Console.WriteLine("9: Exit");
+                Console.WriteLine("9: Get all notifications sent to a particular user");
+                Console.WriteLine("10: Exit");
 
                 Console.Write("Select option: ");
                 string choice = Console.ReadLine() ?? "";
@@ -103,11 +105,21 @@ namespace NotificationApp.ConsoleApp
                             break;
                         case "8":  // Get notification by ID
                             Console.Write("Enter id of notification you want details of: ");
-                            string notifId=Console.ReadLine()??"";
-                            var resNotif=notificationService.GetSentNotificationDetails(notifId);
+                            string notifId = Console.ReadLine() ?? "";
+                            var resNotif = notificationService.GetSentNotificationDetails(notifId);
                             Console.WriteLine($"The notification details are: {resNotif.Message}, sent on {resNotif.SentDate}");
                             return;
-                        case "9":  // Exit
+                        case "9": // Get notifications sent to particular user
+                            Console.Write("Enter user id for whom you want all the notifications that are sent:");
+                            string userId = Console.ReadLine() ?? "";
+                            var resNotifs = notificationService.GetNotificationsByUserId(userId);
+                            Console.WriteLine($"All notifications sent to userId {userId} are: ");
+                            foreach (var notif in resNotifs)
+                            {
+                                Console.WriteLine($"Message: {notif.Message}, sent date: {notif.SentDate}");
+                            }
+                            break;
+                        case "10":  // Exit
                             Console.WriteLine("\nExiting program!\n");
                             return;
 
@@ -117,11 +129,11 @@ namespace NotificationApp.ConsoleApp
                     }
 
                 }
-                catch (ArgumentException e)  // Global error handler for menu actions
+                catch (ArgumentException e)
                 {
                     Console.WriteLine($"Error occured: {e.Message}. Please try again");
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine($"Somethinw went wrong. {e.Message}");
                 }

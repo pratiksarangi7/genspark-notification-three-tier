@@ -1,4 +1,31 @@
 # Notification App: 3 Tier Architecture
+
+## Project Structure
+```
+NotificationApp/
+|
+├── NotificationApp.ModelLibrary/
+│   ├── User.cs
+│   └── Notification.cs
+|
+├── NotificationApp.DALLibrary/
+│   ├── IRepository.cs
+│   ├── AbstractRepository.cs
+│   ├── UserRepository.cs
+│   └── NotificationRepository.cs
+|
+├── NotificationApp.BLLibrary/
+│   ├── INotificationSender.cs
+│   ├── EmailNotificationService.cs
+│   ├── SmsNotificationService.cs
+│   ├── NotificationService.cs
+│   ├── UserService.cs
+│   └── NotificationValidator.cs
+|
+└── NotificationApp.ConsoleApp/
+    └── Program.cs
+```
+
 ## Objectives
 
 ### Presentation Layer
@@ -47,5 +74,4 @@ The solution should demonstrate:
 * Business logic validation ✅
 * Collection usage ✅
 * Future extensibility ✅
-
 

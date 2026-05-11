@@ -8,6 +8,8 @@ namespace NotificationApp.ModelLibrary
         /// <summary>
         /// Initializes user with contact details: email and phone.
         /// </summary>
+         public int Id { get; set; } // db generated
+
         public User(string name, string email, string phoneNumber)
         {
             this.Name = name;

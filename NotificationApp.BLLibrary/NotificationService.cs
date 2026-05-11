@@ -8,7 +8,7 @@ namespace NotificationApp.BLLibrary
     /// </summary>
     public class NotificationService
     {
-        private readonly NotificationRepository notificationRepository = new();  // Stores sent notifications
+        private readonly NotificationDbRepository notificationRepository = new();  // Stores sent notifications
         private readonly NotificationValidator _validator = new();             // Validation before sending
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace NotificationApp.BLLibrary
         {
             // Validate message is not empty and has at least 5 characters
             _validator.ValidateMessage(message);
-            User u = userService.GetUser(userId);
+            User u = userService.GetUser(int.Parse(userId))!;
             // Validate email if sending via Email
             if (sender is EmailNotificationService)
             {
@@ -39,7 +39,7 @@ namespace NotificationApp.BLLibrary
         }
 
         /// <summary>Retrieves a single notification by ID.</summary>
-        public Notification GetSentNotificationDetails(string id)
+        public Notification GetSentNotificationDetails(int id)
         {
             var result = notificationRepository.Get(id);
             return result!;

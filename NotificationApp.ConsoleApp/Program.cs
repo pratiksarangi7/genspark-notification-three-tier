@@ -67,7 +67,7 @@ namespace NotificationApp.ConsoleApp
 
                         case "4":  // Update user
                             Console.Write("Enter user id for whom you want to update details: ");
-                            string id = Console.ReadLine() ?? "";
+                            int.TryParse(Console.ReadLine(), out int id);
                             var currUser = userService.GetUser(id);
                             Console.WriteLine($"User Details Are: {currUser.Name}, {currUser.PhoneNumber}, {currUser.Email}");
                             Console.WriteLine("Enter new user details");
@@ -82,7 +82,7 @@ namespace NotificationApp.ConsoleApp
                             break;
                         case "5":  // Delete user
                             Console.Write("Enter user id who you want to delete: ");
-                            string deleteUserId = Console.ReadLine() ?? "";
+                            int.TryParse(Console.ReadLine(), out int deleteUserId);
                             var deletedUser = userService.DeleteUser(deleteUserId);
                             Console.WriteLine($"The user with details: {deletedUser.Name}, {deletedUser.Email}, {deletedUser.PhoneNumber} has been deleted \n");
                             break;
@@ -106,7 +106,7 @@ namespace NotificationApp.ConsoleApp
                             break;
                         case "8":  // Get notification by ID
                             Console.Write("Enter id of notification you want details of: ");
-                            string notifId = Console.ReadLine() ?? "";
+                            int.TryParse(Console.ReadLine(), out int notifId);
                             var resNotif = notificationService.GetSentNotificationDetails(notifId);
                             Console.WriteLine($"The notification details are: {resNotif.Message}, sent on {resNotif.SentDate}");
                             return;

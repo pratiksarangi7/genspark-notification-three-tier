@@ -8,10 +8,10 @@ namespace NotificationApp.BLLibrary
     /// </summary>
     public class UserService
     {
-        private readonly UserRepository _userRepository = new();  // User data store
+        private readonly UserDbRepository _userRepository = new();  // User data store
 
         /// <summary>Creates new user</summary>
-        public User CreateUser(string name, string email, string phoneNumber)
+        public User? CreateUser(string name, string email, string phoneNumber)
         {
             
             User u = new User(name, email, phoneNumber);
@@ -19,28 +19,25 @@ namespace NotificationApp.BLLibrary
         }
 
         /// <summary>Retrieves user by ID</summary>
-        public User GetUser(string id)
+        public User? GetUser(int id)
         {
-            User u = _userRepository.Get(id)!;
-            return u;
+            return _userRepository.Get(id);
         }
 
         /// <summary>Deletes user by ID</summary>
-        public User DeleteUser(string id)
+        public User? DeleteUser(int id)
         {
-            User u = _userRepository.Delete(id)!;
-            return u;
+            return _userRepository.Delete(id);
         }
 
         /// <summary>Returns all registered users</summary>
-        public List<User> GetAllUsers()
+        public List<User>? GetAllUsers()
         {
-            List<User> list = _userRepository.GetAll()!;
-            return list;
+            return _userRepository.GetAll();
         }
 
         /// <summary>Replaces user details at given ID.</summary>
-        public User UpdateUser(string id, string newName, string newEmail, string newPhone)
+        public User UpdateUser(int id, string newName, string newEmail, string newPhone)
         {
             User newUser = new(newName, newEmail, newPhone);
             _userRepository.Update(id, newUser);

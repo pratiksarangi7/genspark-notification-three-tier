@@ -21,3 +21,6 @@ C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.ConsoleAp
 C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.ConsoleApp\obj\Debug\net10.0\NotificationApp.ConsoleApp.genruntimeconfig.cache
 C:\Users\PRATIK\genspark\c-sharp-codes\notificationapp\NotificationApp.ConsoleApp\obj\Debug\net10.0\ref\NotificationApp.ConsoleApp.dll
 C:\Users\PRATIK\genspark\c-sharp-codes\NotificationApp\NotificationApp.ConsoleApp\obj\Debug\net10.0\NotificationApp.ConsoleApp.sourcelink.json
+C:\Users\PRATIK\genspark\c-sharp-codes\NotificationApp\Notificationapp.consoleapp\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\PRATIK\genspark\c-sharp-codes\NotificationApp\Notificationapp.consoleapp\bin\Debug\net10.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\PRATIK\genspark\c-sharp-codes\NotificationApp\Notificationapp.consoleapp\bin\Debug\net10.0\Npgsql.dll

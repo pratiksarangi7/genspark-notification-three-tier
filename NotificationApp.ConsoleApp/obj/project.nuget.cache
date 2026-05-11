@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "LLBDiWPoeBE=",
+  "dgSpecHash": "CCt4WbiT0Pk=",
   "success": true,
   "projectFilePath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ConsoleApp\\NotificationApp.ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\PRATIK\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\PRATIK\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\PRATIK\\.nuget\\packages\\npgsql\\8.0.9\\npgsql.8.0.9.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -5,6 +5,7 @@ namespace NotificationApp.ModelLibrary
     /// </summary>
     public class Notification
     {
+        public int Id { get; set; } // db generated
         public string Message { get; set; } = string.Empty;  // Notification body
         public string UserId { get; set; } = string.Empty;  
         public DateTime SentDate { get; set; }                // Automatically set while creation

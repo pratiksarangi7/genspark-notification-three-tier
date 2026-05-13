@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ConsoleApp\\NotificationApp.ConsoleApp.csproj": {}
+    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.Consoleapp\\NotificationApp.ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj": {
+    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj",
         "projectName": "NotificationApp.BLLibrary",
-        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj",
+        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj",
         "packagesPath": "C:\\Users\\PRATIK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.BLLibrary\\obj\\",
+        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.BLLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PRATIK\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,11 +26,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj": {
-                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj"
+              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj": {
+                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj"
               },
-              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
-                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj"
+              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
+                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj"
               }
             }
           }
@@ -344,14 +344,14 @@
         }
       }
     },
-    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ConsoleApp\\NotificationApp.ConsoleApp.csproj": {
+    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.Consoleapp\\NotificationApp.ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ConsoleApp\\NotificationApp.ConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.Consoleapp\\NotificationApp.ConsoleApp.csproj",
         "projectName": "NotificationApp.ConsoleApp",
-        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ConsoleApp\\NotificationApp.ConsoleApp.csproj",
+        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.Consoleapp\\NotificationApp.ConsoleApp.csproj",
         "packagesPath": "C:\\Users\\PRATIK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ConsoleApp\\obj\\",
+        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.Consoleapp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PRATIK\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -366,11 +366,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj": {
-                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj"
+              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj": {
+                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.BLLibrary\\NotificationApp.BLLibrary.csproj"
               },
-              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
-                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj"
+              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
+                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj"
               }
             }
           }
@@ -390,6 +390,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -684,14 +692,14 @@
         }
       }
     },
-    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj": {
+    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj",
         "projectName": "NotificationApp.DALLibrary",
-        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj",
+        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.DALLibrary\\NotificationApp.DALLibrary.csproj",
         "packagesPath": "C:\\Users\\PRATIK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.DALLibrary\\obj\\",
+        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.DALLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PRATIK\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -706,8 +714,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
-                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj"
+              "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
+                "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj"
               }
             }
           }
@@ -727,6 +735,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -1021,14 +1035,14 @@
         }
       }
     },
-    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
+    "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
         "projectName": "NotificationApp.ModelLibrary",
-        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
+        "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
         "packagesPath": "C:\\Users\\PRATIK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\NotificationApp\\NotificationApp.ModelLibrary\\obj\\",
+        "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PRATIK\\AppData\\Roaming\\NuGet\\NuGet.Config"

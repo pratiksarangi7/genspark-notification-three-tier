@@ -19,14 +19,14 @@ namespace NotificationApp.BLLibrary
         }
 
         /// <summary>Retrieves user by ID</summary>
-        public User GetUser(string id)
+        public User GetUser(int id)
         {
             User u = _userRepository.Get(id)!;
             return u;
         }
 
         /// <summary>Deletes user by ID</summary>
-        public User DeleteUser(string id)
+        public User DeleteUser(int id)
         {
             User u = _userRepository.Delete(id)!;
             return u;
@@ -40,7 +40,7 @@ namespace NotificationApp.BLLibrary
         }
 
         /// <summary>Replaces user details at given ID.</summary>
-        public User UpdateUser(string id, string newName, string newEmail, string newPhone)
+        public User UpdateUser(int id, string newName, string newEmail, string newPhone)
         {
             User newUser = new(newName, newEmail, newPhone);
             _userRepository.Update(id, newUser);

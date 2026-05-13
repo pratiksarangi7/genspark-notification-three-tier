@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using NotificationApp.ModelLibrary;
 
 namespace NotificationApp.DALLibrary
@@ -5,27 +6,13 @@ namespace NotificationApp.DALLibrary
     /// <summary>
     /// Notification storage repository
     /// </summary>
-    public class NotificationRepository : AbstractRepository<string, Notification>
+    public class NotificationRepository : AbstractRepository<int, Notification>
     {
         // Static counter: acts as ID sequence
-        static string notifId = "1";
-
-        public NotificationRepository()
+        public override Notification? Get(int key)
         {
-            _items = new Dictionary<string, Notification>();
-        }
-
-        /// <summary>
-        /// Stores notification with next ID.
-        /// </summary>
-        public override Notification Create(Notification item)
-        {
-            // Increment ID counter
-            int id = Convert.ToInt32(notifId);
-            id += 1;
-            notifId = id.ToString();
-            _items[notifId] = item;
-            return _items[notifId];
+            Notification? notification=context.Notifications.Include(n=>n.User).FirstOrDefault(n=>n.Id==key);
+            return notification;
         }
     }
 }

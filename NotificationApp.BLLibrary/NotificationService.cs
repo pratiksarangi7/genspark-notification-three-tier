@@ -15,7 +15,7 @@ namespace NotificationApp.BLLibrary
         /// Validates, stores, and sends a notification to the user.
         /// Throws ArgumentException if validation fails.
         /// </summary>
-        public void NotifyUser(string userId, string message, INotificationSender sender, UserService userService)
+        public void NotifyUser(int userId, string message, INotificationSender sender, UserService userService)
         {
             // Validate message is not empty and has at least 5 characters
             _validator.ValidateMessage(message);
@@ -39,7 +39,7 @@ namespace NotificationApp.BLLibrary
         }
 
         /// <summary>Retrieves a single notification by ID.</summary>
-        public Notification GetSentNotificationDetails(string id)
+        public Notification GetSentNotificationDetails(int id)
         {
             var result = notificationRepository.Get(id);
             return result!;
@@ -52,7 +52,7 @@ namespace NotificationApp.BLLibrary
             return result!;
         }
         /// <summary>Returns all notifications sent to particular user.</summary>
-        public List<Notification> GetNotificationsByUserId(string id)
+        public List<Notification> GetNotificationsByUserId(int id)
         {
             var result=notificationRepository.GetAll()!.Where((notif)=>notif.UserId==id);
             return [.. result];

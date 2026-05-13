@@ -53,7 +53,7 @@ namespace NotificationApp.ConsoleApp
                             Console.Write("Enter email message: ");
                             string emailMsg = Console.ReadLine() ?? "";
                             notificationSender = new EmailNotificationService();
-                            notificationService.NotifyUser(userIdInp, emailMsg, notificationSender, userService);
+                            notificationService.NotifyUser(int.Parse(userIdInp), emailMsg, notificationSender, userService);
                             break;
 
                         case "3":  // Send SMS
@@ -62,13 +62,13 @@ namespace NotificationApp.ConsoleApp
                             Console.Write("Enter SMS message: ");
                             string smsMessage = Console.ReadLine() ?? "";
                             notificationSender = new SmsNotificationService();
-                            notificationService.NotifyUser(userIdInp, smsMessage, notificationSender, userService);
+                            notificationService.NotifyUser(int.Parse(userIdInp), smsMessage, notificationSender, userService);
                             break;
 
                         case "4":  // Update user
                             Console.Write("Enter user id for whom you want to update details: ");
                             string id = Console.ReadLine() ?? "";
-                            var currUser = userService.GetUser(id);
+                            var currUser = userService.GetUser(int.Parse(id));
                             Console.WriteLine($"User Details Are: {currUser.Name}, {currUser.PhoneNumber}, {currUser.Email}");
                             Console.WriteLine("Enter new user details");
                             Console.Write("Enter Name: ");
@@ -77,13 +77,13 @@ namespace NotificationApp.ConsoleApp
                             string newEmail = Console.ReadLine() ?? "";
                             Console.Write("Enter Phone Number: ");
                             string newPhone = Console.ReadLine() ?? "";
-                            var updatedResult = userService.UpdateUser(id, newName, newEmail, newPhone);
+                            var updatedResult = userService.UpdateUser(int.Parse(id), newName, newEmail, newPhone);
                             Console.WriteLine($"New user details are: {updatedResult.Name}, {updatedResult.Email}, {updatedResult.PhoneNumber} \n");
                             break;
                         case "5":  // Delete user
                             Console.Write("Enter user id who you want to delete: ");
                             string deleteUserId = Console.ReadLine() ?? "";
-                            var deletedUser = userService.DeleteUser(deleteUserId);
+                            var deletedUser = userService.DeleteUser(int.Parse(deleteUserId));
                             Console.WriteLine($"The user with details: {deletedUser.Name}, {deletedUser.Email}, {deletedUser.PhoneNumber} has been deleted \n");
                             break;
 
@@ -107,13 +107,13 @@ namespace NotificationApp.ConsoleApp
                         case "8":  // Get notification by ID
                             Console.Write("Enter id of notification you want details of: ");
                             string notifId = Console.ReadLine() ?? "";
-                            var resNotif = notificationService.GetSentNotificationDetails(notifId);
+                            var resNotif = notificationService.GetSentNotificationDetails(int.Parse(notifId));
                             Console.WriteLine($"The notification details are: {resNotif.Message}, sent on {resNotif.SentDate}");
                             return;
                         case "9": // Get notifications sent to particular user
                             Console.Write("Enter user id for whom you want all the notifications that are sent:");
                             string userId = Console.ReadLine() ?? "";
-                            var resNotifs = notificationService.GetNotificationsByUserId(userId);
+                            var resNotifs = notificationService.GetNotificationsByUserId(int.Parse(userId));
                             Console.WriteLine($"All notifications sent to userId {userId} are: ");
                             foreach (var notif in resNotifs)
                             {
@@ -136,7 +136,8 @@ namespace NotificationApp.ConsoleApp
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Somethinw went wrong. {e.Message}");
+                    Console.WriteLine($"Something went wrong. {e.Message}");
+                    Console.WriteLine($"Inner: {e.InnerException?.Message}");
                 }
             }
         }

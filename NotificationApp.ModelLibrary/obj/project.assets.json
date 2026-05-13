@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\notificationapp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
       "projectName": "NotificationApp.ModelLibrary",
-      "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\notificationapp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
+      "projectPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\NotificationApp.ModelLibrary.csproj",
       "packagesPath": "C:\\Users\\PRATIK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\notificationapp\\NotificationApp.ModelLibrary\\obj\\",
+      "outputPath": "C:\\Users\\PRATIK\\genspark\\c-sharp-codes\\three_tier_notification\\NotificationApp\\NotificationApp.ModelLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PRATIK\\AppData\\Roaming\\NuGet\\NuGet.Config"

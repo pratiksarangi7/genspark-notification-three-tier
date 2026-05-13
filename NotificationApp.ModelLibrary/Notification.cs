@@ -5,18 +5,20 @@ namespace NotificationApp.ModelLibrary
     /// </summary>
     public class Notification
     {
+        public int Id { get; set; }
         public string Message { get; set; } = string.Empty;  // Notification body
-        public string UserId { get; set; } = string.Empty;  
-        public DateTime SentDate { get; set; }                // Automatically set while creation
+        public int UserId { get; set; }
+        public DateTime SentDate { get; set; }
+        public User User { get; set; } = null!;          // Automatically set while creation
 
         /// <summary>
         /// Creates notification with user link, timestamps to current time.
         /// </summary>
-        public Notification(string message, string userId)
+        public Notification(string message, int userId)
         {
             Message = message;
             UserId = userId;
-            SentDate = DateTime.Now;
+            SentDate = DateTime.UtcNow;
         }
     }
 

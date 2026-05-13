@@ -1,4 +1,5 @@
 using System.Security.Cryptography;
+using Microsoft.EntityFrameworkCore;
 using NotificationApp.ModelLibrary;
 
 namespace NotificationApp.DALLibrary
@@ -6,28 +7,12 @@ namespace NotificationApp.DALLibrary
     /// <summary>
     /// User storage repository.
     /// </summary>
-    public class UserRepository : AbstractRepository<string, User>
+    public class UserRepository : AbstractRepository<int, User>
     {
-        // Static counter: acts as ID sequence
-        static string userId = "1";
-
-        public UserRepository()
+        public override User? Get(int key)
         {
-            _items = new Dictionary<string, User>();
-        }
-
-        /// <summary>
-        /// Stores user with next ID.
-        /// </summary>
-        public override User Create(User item)
-        {
-            // Increment ID counter
-            int id = Convert.ToInt32(userId);
-            id += 1;
-            userId = id.ToString();
-            Console.WriteLine($"user id is: {userId}");
-            _items[userId] = item;
-            return item;
+            var User=context.Users.FirstOrDefault(u=>u.Id==key);
+            return User;
         }
     }
 }

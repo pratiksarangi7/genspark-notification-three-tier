@@ -2,48 +2,50 @@
 namespace NotificationApp.DALLibrary
 {
     /// <summary>
-    /// Base repository with in-memory Dictionary storage.
-    /// Subclasses must implement Create (for ID generation).
     /// </summary>
     public abstract class AbstractRepository<K, T> : IRepository<K, T> where T : class
     {
-        // In-memory store; initialized by subclass constructors
-        public Dictionary<K, T> _items;
-
-        /// <summary>Abstract — subclass handles ID generation.</summary>
-        public abstract T Create(T item);
+        protected NotificationAppContext context;
+        protected AbstractRepository()
+        {
+            context = new NotificationAppContext();
+        }
+        public T Create(T item)
+        {
+            context.Add(item);
+            context.SaveChanges();
+            return item;
+        }
 
         /// <summary>Removes and returns entity by key.</summary>
         public T? Delete(K key)
         {
-            var item = _items[key];
-            if (item == null) return null;
-            _items.Remove(key);
+            T? item = Get(key);
+            if (item == null)
+            {
+                throw new Exception("Item doesn't exist");
+            }
+            context.Remove(item);
+            context.SaveChanges();
             return item;
         }
 
         /// <summary>Looks up entity by key.</summary>
-        public T? Get(K key)
-        {
-            var item = _items[key];
-            if (item == null) return null;
-            return item;
-
-        }
+        public abstract T? Get(K key);
 
         /// <summary>Returns all stored entities as a list.</summary>
         public List<T>? GetAll()
         {
-            if (_items.Count == 0) return null;
-            return _items.Values.ToList();
+            return [.. context.Set<T>()];
         }
 
         /// <summary>Replaces entity at key with updated version.</summary>
         public T? Update(K key, T item)
         {
-            if (_items[key] == null) return null;
-            _items[key] = item;
-            return _items[key];
+            var currItem=Get(key);
+            if(currItem==null) throw new Exception("Item doesn't exist");
+            context.Update(item);
+            return item;
         }
 
     }
